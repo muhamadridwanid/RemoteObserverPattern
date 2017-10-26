@@ -3,10 +3,10 @@
 ### Cara kerja:
 
  * Observer membuka port http 8080 (default), menset username, password, dan list ip yang dapat mengakses (whitelist).
- * Observer implementasi interface 'Observer' method onUpdate.
+ * Observer implementasi interface 'Listener' dan extend Class ClientConfig.
  * Observable mendaftarkan Observer dengan mencatat Ip address, Port, Username, Password.
  * Ketika terjadi perubahan di Observable, Observable memberi notifikasi kesemua Observer dengan cara memanngil 'Observer fireChanged'.
- * Ketika 'Observer fireChanged' dipanggil Observable, maka otomatis Observer yang telah didaftarkan akan mengeksekusi 'Observer onUpdate' sesuai implementasi masing-masing.
+ * Ketika 'Observer fireChanged' dipanggil Observable, maka otomatis Observer yang telah didaftarkan akan mengeksekusi 'Listener onUpdate' sesuai implementasi masing-masing.
 
 ### Teknologi yang digunakan:
 
@@ -42,7 +42,7 @@
         </dependency>
     ```
  * Untuk Observable Buat Class yang mengextend Class 'Observable'. Instance Interface 'Observer' kemudian panggil method addObserver. Ketika ingin memberi notifikasi panggil method 'fireChanged'.
- * Untuk Observer Buat Class yang mengextend Class ClientConfig dan Class yang mengimplement Interface Observer.
+ * Untuk Observer Buat Class yang mengextend Class 'ClientConfig' dan Class yang mengimplement Interface 'Listener'.
  
 ### Lisensi pengunaan:
 [MIT License](https://github.com/muhamadridwanid/RemoteObserverPattern/blob/master/LICENSE)
