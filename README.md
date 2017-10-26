@@ -44,5 +44,5 @@
  * Untuk Observable Buat Class yang mengextend Class 'Observable'. Instance Interface 'Observer' kemudian panggil method addObserver. Ketika ingin memberi notifikasi panggil method 'fireChanged'.
  * Untuk Observer Buat Class yang mengextend Class ClientConfig dan Class yang mengimplement Interface Observer.
  
-
-Click here to English tutorial :)
+### Lisensi pengunaan:
+[MIT License](https://github.com/muhamadridwanid/RemoteObserverPattern/blob/master/LICENSE)
